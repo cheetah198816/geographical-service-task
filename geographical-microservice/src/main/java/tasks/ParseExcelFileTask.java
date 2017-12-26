@@ -80,6 +80,7 @@ public class ParseExcelFileTask implements Runnable {
             }
             return sectionDataList;
         } catch (IOException ex) {
+            //log the error.
         }
         return sectionDataList;
     }
