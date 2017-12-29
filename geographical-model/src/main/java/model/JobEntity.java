@@ -14,7 +14,7 @@ import java.util.List;
 @Table(name = "job")
 @SequenceGenerator(name = "seq_job", sequenceName = "seq_job")
 @Data
-@EqualsAndHashCode(exclude = "sectionEntityList")
+@EqualsAndHashCode
 public class JobEntity {
 
     @Id

@@ -52,10 +52,9 @@ public class ParseExcelFileTask implements Runnable {
                 .collect(Collectors.toList());
     }
 
-    private List<SectionEntity> writeData(List<SectionEntity> sectionEntities) {
-        return sectionEntities.stream()
-                .map(sectionEntity -> geographicalProcess.saveSectionEntity(sectionEntity, jobId))
-                .collect(Collectors.toList());
+    private void writeData(List<SectionEntity> sectionEntities) {
+        sectionEntities.stream()
+                .forEach(sectionEntity -> geographicalProcess.saveSectionEntity(sectionEntity, jobId));
     }
 
     private List<SectionData> readAndparseExcelFile(JobEntity jobEntity) {

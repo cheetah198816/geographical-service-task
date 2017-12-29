@@ -14,7 +14,7 @@ import java.util.List;
 @Table(name = "section")
 @SequenceGenerator(name = "seq_section", sequenceName = "seq_section")
 @Data
-@EqualsAndHashCode(exclude = "job,geographicalClassesEntityList")
+@EqualsAndHashCode
 public class SectionEntity implements Serializable {
 
     @Id

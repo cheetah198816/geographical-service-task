@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Table(name = "geographical_classes")
 @SequenceGenerator(name = "seq_geo_classes", sequenceName = "seq_geo_classes")
 @Data
-@EqualsAndHashCode(exclude = "section")
+@EqualsAndHashCode
 public class GeographicalClassesEntity {
 
     @Id
@@ -23,6 +23,6 @@ public class GeographicalClassesEntity {
 
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private SectionEntity section;
 }

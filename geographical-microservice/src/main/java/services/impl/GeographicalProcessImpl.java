@@ -67,7 +67,7 @@ public class GeographicalProcessImpl implements GeographicalProcess {
     @Override
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public SectionEntity saveSectionEntity(SectionEntity sectionEntity, Long jobId) {
-        sectionEntity.setJob(jobRepository.findById(jobId).get());
+        sectionEntity.setJob(findById(jobId));
         SectionEntity savedSection = sectionRepository.save(sectionEntity);
         sectionEntity.getGeographicalClassesEntityList().stream().forEach(geographicalClassesEntity -> saveGeographicalClassesEntity(savedSection, geographicalClassesEntity));
         return savedSection;
