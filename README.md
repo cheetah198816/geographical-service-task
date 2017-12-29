@@ -9,6 +9,12 @@ This microservice contains one module :
 	3. The main class to start the module is GeographicalApplication.java.
 	4. Simple Asnyc Task Executor is used to parse the file asynchronously.
 
+The other two modules :
+
+**geographical-api-task** : contains the dtos.
+
+**geographical-model** : contains the entities.
+
 **Database** :
 
 The database used is In Memory Database(H2). You can also use PostGreSql 10. Please ensure you have it installed on the system and the relevant database and schema is created. You can find the database and the schema in the application properties spring.datasource.url property.
